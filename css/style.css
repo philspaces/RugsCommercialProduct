@@ -1,0 +1,273 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* loading scene */
+.preload{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 5;
+}
+/* navigation section */
+#mask-wrapper{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        height: 100%;
+        margin: 0;
+}
+.mask{
+    position: relative;
+    background: rgba(209, 209, 209, 0.6);
+    height: 100%;
+}
+#mask2{
+    color: rgb(253, 253, 253);
+    background: rgba(179, 179, 179, 0.6);
+}
+#mask3{
+    background: rgba(141, 141, 141, 0.6);
+}
+#mask4{
+    background: rgba(83, 83, 83, 0.6);
+}
+#mask1:hover, #mask2:hover, #mask3:hover, #mask4:hover{
+    background: rgba(255,255,255,0.0);
+}
+.mask-content{
+    font-size: 14.5pt;
+    position: absolute;    
+    top: 30%;
+}
+#mask2-content,#mask4-content{
+    top: 60%;
+    color: rgb(255, 255, 255);
+}
+/* about us section */
+/* hambergur menu */
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 75px;
+
+  padding-left: 50px;
+  z-index: 1;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+/* hide checkbox
+place it over menu to listen to click event */
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute; 
+  top: -7px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2; 
+}
+
+/*
+ * style hambergur 
+    ---
+    ---
+    ---
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #888888;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s ease, 
+              background 0.5s ease,
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ cross mark when clicked
+ 1st bar
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * hide middle bar
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * 3rd bar
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+list items inside hambergur
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s ease;
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 14pt;
+}
+
+/*
+  list slide in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/* about us content */
+#aboutus-content{
+    padding: 50px;
+}
+
+#aboutus-1,#aboutus-2,#aboutus-3,#aboutus-4{
+    max-height: 1000px;
+}
+
+#mask-aboutus-1-1,#aboutus-1 img{
+    height: 40%;
+    width: auto;
+    object-fit: cover;
+}
+
+.mask-aboutus{
+    position:absolute;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    background-color: rgba(0,0,0,0.5); 
+    -webkit-mask-image: radial-gradient(ellipse 85% 85% at 48% 50%, black 38%, transparent 60%);
+    mask-image: radial-gradient(ellipse 85% 85% at 48% 50%, black 38%, transparent 50%);
+    z-index: 1;
+
+    visibility: hidden;
+}
+
+
+#mask-aboutus-2-1,#aboutus-2 img{
+    height: 45%;
+    width: auto;
+    object-fit: cover;
+}
+
+#mask-aboutus-2-2,#aboutus-2 span:first-child img{
+    height: 45%;
+}
+#mask-aboutus-3-2, #aboutus-3 img{
+    height: 48%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#mask-aboutus-3-1,#aboutus-3 span:nth-last-child(3) img{
+    height:30%;
+    object-fit: cover;
+}
+
+#aboutus-4{
+    height: 95%;
+    width:auto;
+    padding-top: 10%;
+}
+#mask-aboutus-4-1{
+    height: 63%;
+}
+#mask-aboutus-1-1,#mask-aboutus-2-1,#mask-aboutus-2-2,#mask-aboutus-3-1,#mask-aboutus-3-2,#mask-aboutus-4-1{
+    width: 92%;
+}
+
+
+/* animate function */
+.slideUp{
+    transform: translateY(-3.5%);
+    transition: transform 0.5s ease;
+}
+.showInfo{
+    visibility: visible; 
+    transition: all .8s ease-in-out;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
