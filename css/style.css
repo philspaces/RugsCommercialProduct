@@ -189,7 +189,60 @@ list items inside hambergur
 }
 
 /* about us content */
+.img-wrapper{
+  background-size: cover; /*cover in center?*/
+  background-position: center;
+  overflow: hidden;
+}
+.img-wrapper:hover .mask-aboutus{
+  bottom: 0;
+}
+.mask-aboutus{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1vw;
+  color: white;
+  bottom: -500px;
+  transition: all 0.5s ease;
+}
+#aboutus-1 .img-wrapper{
+  background-image: url('../photos/aboutus-1-1.jpg');
+  height: 40%;
+}
+#aboutus-2 .img-wrapper:first-child{
+  background-image: url('../photos/aboutus-2-1.jpg');
+  height: 55%;
+}
+#aboutus-2 .img-wrapper:last-child{
+  background-image: url('../photos/aboutus-2-2.jpg');
+  height: 45%;
+}
+#aboutus-3 .img-wrapper:nth-child(3){
+  background-image: url('../photos/aboutus-3-1.jpg');
+  height: 44%;
+}
+#aboutus-3 .img-wrapper:last-child{
+  background-image: url('../photos/aboutus-3-2.JPG');
+  height: 48%;
+}
+#aboutus-4{
+  padding-top: 10%;
+}
+#aboutus-4 .img-wrapper{
+  background-image: url('../photos/aboutus-4-1.JPG');
+  height: 80%;
+}
+/* question??? */
 #aboutus-content{
+  height: auto;
+  padding: 50px;
+}
+/* #aboutus-content{
     padding: 50px;
 }
 
@@ -250,7 +303,7 @@ list items inside hambergur
 }
 #mask-aboutus-1-1,#mask-aboutus-2-1,#mask-aboutus-2-2,#mask-aboutus-3-1,#mask-aboutus-3-2,#mask-aboutus-4-1{
     width: 92%;
-}
+} */
 
 
 /* animate function */
