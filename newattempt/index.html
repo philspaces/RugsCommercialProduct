@@ -19,7 +19,7 @@
     
     <!-- my style css link -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- <link rel="stylesheet" href="./css/debug.css"/> -->
+    <link rel="stylesheet" href="./css/debug.css"/>
   </head>
   <body>
     <!-- loading page section -->
@@ -75,7 +75,7 @@
     
     
     <!-- NAVIGATION section -->
-    <section class="section navigate-section inverted" id="nav-background">
+    <section class="section navigate-section inverted" id="nav-background" style="background-image: url(./photos/section2.jpg)">
       <sl-switch id="dark-btn">Dark Mode</sl-switch>
       <div class="mask-wrapper inverted">
         <div class="columns">
@@ -112,66 +112,66 @@
     </section>
     <!--end of NAVIGATION section -->
 
+    <!-- navbar  -->
+    <nav class="navbar" aria-label="main navigation">
+      <div class="navbar-brand" style="width: 100%">
+        <!-- left component -->
+        <a
+          role="button"
+          class="navbar-burger"
+          style="margin-left: 0; z-index: 2"
+          data-target="navMenu-aboutus"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <!-- target navMenu toggle when navbar-burger is clicked -->
+        <div class="navbar-menu" id="navMenu-aboutus">
+          <div
+            class="navbar-start"
+            style="display: block; padding-left: 15px; z-index: 1; background-color: whitesmoke;"
+          >
+            <!-- navbar items -->
+            <a class="navbar-item" href="#nav-background"> Home </a>
+            <a class="navbar-item" href="#aboutus-section"> About Us </a>
+            <a class="navbar-item" href="#product-section"> Product </a>
+            <a class="navbar-item" href="#style-section"> Style Guide </a>
+            <a class="navbar-item" href="#blog-section"> Blog </a>
+          </div>
+        </div>
+        <!-- right component -->
+        <div class="navbar-end" style="margin-left: auto">
+          <!-- facebook img -->
+          <sl-tooltip content="Facebook">
+            <div class="navbar-item">
+              <a href="https://www.facebook.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/facebook.svg'); background-size: cover;"></a>
+            </div>
+          </sl-tooltip>
+          
+          <!-- insta img -->
+          <sl-tooltip content="Instagram">
+            <div class="navbar-item">
+              <a href="https://www.instagram.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/instagram.svg'); background-size: cover;"></a>
+            </div>
+          </sl-tooltip>
+          
+          <!-- Pint img -->
+          <sl-tooltip content="Pinterest">
+            <div class="navbar-item">
+              <a href="https://www.pinterest.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/pinterest.svg'); background-size: cover;"></a>
+            </div>
+          </sl-tooltip>
+        </div>
+
+      </div>
+    </nav>
+    <!-- end nav bar -->
+
     <!-- About Us Section -->
     <section id="aboutus-section" class="section aboutus-section" style="height: 100%;">
-      <!-- navbar  -->
-      <nav class="navbar" aria-label="main navigation">
-        <div class="navbar-brand" style="width: 100%">
-          <!-- left component -->
-          <a
-            role="button"
-            class="navbar-burger"
-            style="margin-left: 0; z-index: 2"
-            data-target="navMenu-aboutus"
-            aria-label="menu"
-            aria-expanded="false"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-          <!-- target navMenu toggle when navbar-burger is clicked -->
-          <div class="navbar-menu" id="navMenu-aboutus">
-            <div
-              class="navbar-start"
-              style="display: block; padding-left: 15px; z-index: 1; background-color: whitesmoke;"
-            >
-              <!-- navbar items -->
-              <a class="navbar-item" href="#nav-background"> Home </a>
-              <a class="navbar-item" href="#aboutus-section"> About Us </a>
-              <a class="navbar-item" href="#product-section"> Product </a>
-              <a class="navbar-item" href="#style-section"> Style Guide </a>
-              <a class="navbar-item" href="#blog-section"> Blog </a>
-            </div>
-          </div>
-          <!-- right component -->
-          <div class="navbar-end" style="margin-left: auto">
-            <!-- facebook img -->
-            <sl-tooltip content="Facebook">
-              <div class="navbar-item">
-                <a href="https://www.facebook.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/facebook.svg'); background-size: cover;"></a>
-              </div>
-            </sl-tooltip>
-            
-            <!-- insta img -->
-            <sl-tooltip content="Instagram">
-              <div class="navbar-item">
-                <a href="https://www.instagram.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/instagram.svg'); background-size: cover;"></a>
-              </div>
-            </sl-tooltip>
-            
-            <!-- Pint img -->
-            <sl-tooltip content="Pinterest">
-              <div class="navbar-item">
-                <a href="https://www.pinterest.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/pinterest.svg'); background-size: cover;"></a>
-              </div>
-            </sl-tooltip>
-          </div>
-
-        </div>
-      </nav>
-      <!-- end nav bar -->
-
       <!-- about us title -->
       <div class="level">
         <!-- vertically centered container-->
@@ -189,7 +189,7 @@
                   Every step of our journey has been taken with beauty and community in mind.
                   We create and sell luxurious, elgant prducts that bring the world together.
               </p>
-
+              <br>
               <div class="image is-4by5 image-wrapper inverted">
                 <div class="mask-aboutus">
                   <p style="padding: 1.25rem;"> Masters weave.
@@ -197,7 +197,7 @@
                     people like these got jobs to support their family</p>
                 </div>  
               </div>
-
+              <br>
               <p>Persian Living is a family business establish by a daring son Indi Rujuk, whose dream is to bring his
                   farther, Malak Rujuk's skill of craftmanship to the world.</p>
               <p>Our purpose is to create beautiful lives for our customers, consumers, their families and friends,
@@ -232,7 +232,6 @@
                   Most of the weavers are woman who to us, are also a mother, a sister, a family member that we are
                   fully trusted in.
               </P>
-              
               <div class="image is-4by5 image-wrapper inverted"> 
                 <div class="mask-aboutus">
                   <p style="padding: 1.25rem;"> Teaching to weave.
@@ -258,7 +257,7 @@
                   place.
                   Today, more than 2500 women and children have been educated through the program.
               </p>
-              
+              <br>
               <div class="image is-1by2 image-wrapper inverted"> 
                 <div class="mask-aboutus"> 
                   <p style="padding: 1.25rem;"> Women learning to weave.
@@ -276,63 +275,7 @@
 
     <!-- PRODUCT section -->
     <section id="product-section" class="section product-section">
-            <!-- navbar  -->
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-              <div class="navbar-brand" style="width: 100%">
-                <!-- left component -->
-                <a
-                  role="button"
-                  class="navbar-burger"
-                  style="margin-left: 0; z-index: 2"
-                  data-target="navMenu-product"
-                  aria-label="menu"
-                  aria-expanded="false"
-                >
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                </a>
-                <!-- target navMenu toggle when navbar-burger is clicked -->
-                <div class="navbar-menu" id="navMenu-product">
-                  <div
-                    class="navbar-start"
-                    style="display: block; padding-left: 15px; z-index: 1; background-color: whitesmoke;"
-                  >
-                    <!-- navbar items -->
-                    <a class="navbar-item" href="#nav-background"> Home </a>
-                    <a class="navbar-item" href="#aboutus-section"> About Us </a>
-                    <a class="navbar-item" href="#product-section"> Product </a>
-                    <a class="navbar-item" href="#style-section"> Style Guide </a>
-                    <a class="navbar-item" href="#blog-section"> Blog </a>
-                  </div>
-                </div>
-                <!-- right component -->
-                <div class="navbar-end" style="margin-left: auto">
-                  <!-- facebook img -->
-                  <sl-tooltip content="Facebook">
-                    <div class="navbar-item">
-                      <a href="https://www.facebook.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/facebook.svg'); background-size: cover;"></a>
-                    </div>
-                  </sl-tooltip>
-                  
-                  <!-- insta img -->
-                  <sl-tooltip content="Instagram">
-                    <div class="navbar-item">
-                      <a href="https://www.instagram.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/instagram.svg'); background-size: cover;"></a>
-                    </div>
-                  </sl-tooltip>
-                  
-                  <!-- Pint img -->
-                  <sl-tooltip content="Pinterest">
-                    <div class="navbar-item">
-                      <a href="https://www.pinterest.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/pinterest.svg'); background-size: cover;"></a>
-                    </div>
-                  </sl-tooltip>
-                </div>
-              </div>
-            </nav>
-            <!-- end nav bar -->
-
+            
        <!-- PRODUCT title -->
        <div class="level">
         <!-- vertically centered container-->
@@ -604,62 +547,6 @@
 
     <!-- STYLE GUIDE section -->
     <section id="style-section" class="section style-section">
-      <!-- navbar  -->
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand" style="width: 100%">
-          <!-- left component -->
-          <a
-            role="button"
-            class="navbar-burger"
-            style="margin-left: 0; z-index: 2"
-            data-target="navMenu-style"
-            aria-label="menu"
-            aria-expanded="false"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-          <!-- target navMenu toggle when navbar-burger is clicked -->
-          <div class="navbar-menu" id="navMenu-style">
-            <div
-              class="navbar-start"
-              style="display: block; padding-left: 15px; z-index: 1; background-color: whitesmoke;"
-            >
-              <!-- navbar items -->
-              <a class="navbar-item" href="#nav-background"> Home </a>
-              <a class="navbar-item" href="#aboutus-section"> About Us </a>
-              <a class="navbar-item" href="#product-section"> Product </a>
-              <a class="navbar-item" href="#style-section"> Style Guide </a>
-              <a class="navbar-item" href="#blog-section"> Blog </a>
-            </div>
-          </div>
-          <!-- right component -->
-          <div class="navbar-end" style="margin-left: auto">
-            <!-- facebook img -->
-            <sl-tooltip content="Facebook">
-              <div class="navbar-item">
-                <a href="https://www.facebook.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/facebook.svg'); background-size: cover;"></a>
-              </div>
-            </sl-tooltip>
-            
-            <!-- insta img -->
-            <sl-tooltip content="Instagram">
-              <div class="navbar-item">
-                <a href="https://www.instagram.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/instagram.svg'); background-size: cover;"></a>
-              </div>
-            </sl-tooltip>
-            
-            <!-- Pint img -->
-            <sl-tooltip content="Pinterest">
-              <div class="navbar-item">
-                <a href="https://www.pinterest.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/pinterest.svg'); background-size: cover;"></a>
-              </div>
-            </sl-tooltip>
-          </div>
-        </div>
-      </nav>
-      <!-- end nav bar -->
 
       <!-- STYLE title -->
       <div class="level">
@@ -791,62 +678,6 @@
 
 <!-- BLOG  section -->
 <section id="blog-section" class="section blog-section" style="height: 100%;">
-  <!-- navbar  -->
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand" style="width: 100%">
-      <!-- left component -->
-      <a
-        role="button"
-        class="navbar-burger"
-        style="margin-left: 0; z-index: 2"
-        data-target="navMenu-blog"
-        aria-label="menu"
-        aria-expanded="false"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-      <!-- target navMenu toggle when navbar-burger is clicked -->
-      <div class="navbar-menu" id="navMenu-blog">
-        <div
-          class="navbar-start"
-          style="display: block; padding-left: 15px; z-index: 1; background-color: whitesmoke;"
-        >
-          <!-- navbar items -->
-          <a class="navbar-item" href="#nav-background"> Home </a>
-          <a class="navbar-item" href="#aboutus-section"> About Us </a>
-          <a class="navbar-item" href="#product-section"> Product </a>
-          <a class="navbar-item" href="#style-section"> Style Guide </a>
-          <a class="navbar-item" href="#blog-section"> Blog </a>
-        </div>
-      </div>
-      <!-- right component -->
-      <div class="navbar-end" style="margin-left: auto">
-        <!-- facebook img -->
-        <sl-tooltip content="Facebook">
-          <div class="navbar-item">
-            <a href="https://www.facebook.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/facebook.svg'); background-size: cover;"></a>
-          </div>
-        </sl-tooltip>
-        
-        <!-- insta img -->
-        <sl-tooltip content="Instagram">
-          <div class="navbar-item">
-            <a href="https://www.instagram.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/instagram.svg'); background-size: cover;"></a>
-          </div>
-        </sl-tooltip>
-        
-        <!-- Pint img -->
-        <sl-tooltip content="Pinterest">
-          <div class="navbar-item">
-            <a href="https://www.pinterest.com/" target="_blank" class="image is-24x24" style="background-image: url('./photos/pinterest.svg'); background-size: cover;"></a>
-          </div>
-        </sl-tooltip>
-      </div>
-    </div>
-  </nav>
-  <!-- end nav bar -->
   <!-- BLOG title -->
   <div class="level">
     <!-- vertically centered container-->
