@@ -1,0 +1,321 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.invert{
+    filter: invert(1) hue-rotate(180deg);
+}
+
+#dark-btn{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 10;
+    color: white;
+}
+
+/* loading page */
+#loading-page{
+    position: fixed;
+    height: 105vh; 
+    width: 100%; 
+    background-color: white;
+    transition: opacity 0.5s ease;
+    z-index: 31; /*.navbar has z-index 30*/
+}
+.load-finish{
+    opacity: 0;
+    pointer-events: none;
+}
+#logo{
+    margin: auto;
+    width: 25%;
+    position: absolute;
+    top: 34%;
+    left: 37%;
+    transform: translateY(-50%,-50%);
+}
+
+/* start from here first path */
+#logo path:nth-child(4){
+    stroke: black;
+    stroke-width: 5px;
+    stroke-dasharray: 268.6px;
+    stroke-dashoffset: 268.6px;
+    animation: logo-ani 3s ease forwards;
+}
+#logo path:nth-child(5){
+    stroke: black;
+    stroke-width: 5px;
+    stroke-dasharray: 239.01px;
+    stroke-dashoffset: 239.01px;
+    animation: logo-ani 3s ease forwards 0.3s;
+
+}
+#logo path:nth-child(6){
+    stroke: black;
+    stroke-width: 5px;
+    stroke-dasharray: 239.01px;
+    stroke-dashoffset: 239.01px;
+    animation: logo-ani 3s ease forwards 0.6s;
+}
+#logo path:nth-child(7){
+    stroke: black;
+    stroke-width: 5px;
+    stroke-dasharray: 194.1px;
+    stroke-dashoffset: 194.1px;
+    animation: logo-ani 3s ease forwards 0.9s;
+}
+#logo path:nth-child(8){
+    stroke: black;
+    stroke-width: 5px;
+    stroke-dasharray: 190.6px;
+    stroke-dashoffset: 190.6px;
+    animation: logo-ani 3s ease forwards 1.2s;
+}
+#logo path:nth-child(9){
+    stroke: black;
+    stroke-width: 5px;
+    stroke-dasharray: 136.9px;
+    stroke-dashoffset: 136.9px;
+    animation: logo-ani 3s ease forwards 1.5s;
+}
+
+.cls-2{
+    animation: text-ani 0.5s ease forwards 4s;
+}
+
+/* end loading page */
+
+
+/* Navigation section */
+#nav-background{
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#aboutus-1,#aboutus-2,#aboutus-3,#aboutus-4{
+}
+
+.mask-wrapper{
+    height: 100%;
+    width: 100%;
+
+}
+
+.mask-content{
+    padding: 40px;
+    padding-top: 20%;
+    color: rgb(253, 253, 253);
+    height: 100vh;
+    background: rgba(184, 184, 184, 0.6);
+    font-size: 1.1vw;
+    transition: all 0.5s ease-out;
+}
+
+.mask-content:hover{
+    transform: translateY(5px);
+}
+
+#mask1,#mask2,#mask3,#mask4{
+    cursor: pointer;
+}
+
+#mask2{
+    padding-top: 27.5%;
+    background: rgba(156, 156, 156, 0.6);
+}
+#mask3{
+    background: rgba(121, 121, 121, 0.6);
+}
+#mask4{
+    padding-top: 27%;
+    background: rgba(83, 83, 83, 0.6);
+}
+#mask1:hover, #mask2:hover, #mask3:hover, #mask4:hover{
+    background: rgba(255,255,255,0.0);
+    color: black;
+}
+/* end Navigation section */
+
+.navbar{
+    position: sticky;
+    top :0;
+}
+
+/* about us section */
+.image-wrapper{
+    background-position: center;
+    background-size: cover;
+    overflow:hidden;
+}
+    /* first column */
+#aboutus-1 .image-wrapper{
+    background-image: url('../photos/aboutus-1-1.jpg');
+}
+    /* second column */
+#aboutus-2 .image-wrapper:first-child{
+    background-image: url('../photos/aboutus-2-1.jpg');
+}
+#aboutus-2 .image-wrapper:last-child{
+    background-image: url('../photos/aboutus-2-2.jpg');
+}
+    /* third column */
+#aboutus-3 .image-wrapper:nth-child(3){
+    background-image: url('../photos/aboutus-3-1.jpg');
+}
+#aboutus-3 .image-wrapper:last-child{
+    background-image: url('../photos/aboutus-3-2.JPG');
+}
+    /* forth column */
+#aboutus-4 .image-wrapper{
+    background-image: url('../photos/aboutus-4-1.JPG');
+}
+
+/* making mask for image */
+.mask-aboutus{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1vw;
+    color: white;
+    background-color: rgba(0,0,0,0.5); 
+    /* hide mask */
+    top: 900px;
+    transition: all 0.5s ease;
+}
+.image-wrapper:hover .mask-aboutus{
+    top: 0;
+}
+/* end ABOUT US section */
+
+
+
+/* PRODUCT section */
+.mask-product{
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    bottom: -900px;
+    left: 0px;
+    background-color: #f5f5f5; 
+    transition: all 0.5s ease;
+}
+.image-wrapper:hover .mask-product{
+    bottom: 0;
+}
+hr{
+    width: 40%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5));
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* end PRODUCT section */
+
+.footer {
+    font-size: 0.9vw;
+    color: white;
+    background-color: #7a7a7a;
+}
+
+
+/* responsive section */
+@media screen and (max-width: 800px){
+    .mask-content{
+        height: 25vh;
+        padding: 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .mask-content p{
+        display: none;
+    }
+    .mask-wrapper{
+        height: auto;
+    }
+    #mask2, #mask4{
+        padding: 0;
+    }
+}
+
+.navbar-end{
+    display: flex;
+}
+/* default desktop */
+@media screen and (min-width: 1024px){
+    .navbar-burger{
+        display: block;
+    }
+    .navbar-menu{
+        display: none;
+    }
+    .style-section p{
+        font-size: 0.9vw;
+    }
+    .blog-article p{
+        font-size: 1.1vw;
+    }
+}
+
+/* for mobile */
+@media screen and (max-width: 768px){
+    .image-wrapper{
+        width: 55%;
+        max-height: 60%;
+        padding-top: 50% !important;
+        margin: auto;
+    }
+    .mask-product .subtitle{
+        font-size: 1.6vw !important;
+    }
+    .style-section .columns p{
+        font-size: 1.6vw !important;
+    }
+    .blog-article p{
+        font-size: 1.6vw !important;
+    }
+    .blog-column-1, .blog-column-4 , .blog-column-2 {
+        display: none;
+    }
+    
+
+}
+
+.show-menu{
+    display: block;
+    position: absolute;
+    left: 3%;
+    box-shadow: 0 8px 16px rgba(10,10,10,.1);
+}
+
+/* animation section */
+@keyframes logo-ani{
+    50%{
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    100%{
+       fill: black;
+    }
+}
+@keyframes text-ani{
+    to{
+        fill: black;
+    }
+}
